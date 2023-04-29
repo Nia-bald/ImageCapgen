@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Image caption generation</h1>
+    <h4>Upload your Image here</h4>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="image" id="image" >
+
+        </div>
+        <div class="form-group">
+            <label for="caption">start of the sentence:</label>
+            <input type="text" id="caption" name="prompt" value="a photograph of">
+        </div>
+        <button type="submit">generate caption</button>
+    </form>
+</div>
+{% endblock %}
